@@ -1,105 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtlanticEDU - Coming Soon</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        #countdown {
-            font-size: 2em;
-            margin-top: 20px;
-            color: #333;
-        }
-
-        #subscribe-form {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #email-input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            width: 60%;
-            margin-right: 10px;
-        }
-
-        #subscribe-btn {
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        #subscribe-btn:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <title>Atlantic EDU</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>AtlanticEDU</h1>
-        <p>Empowering Minds, Shaping Futures</p>
-        <p>We're working on something exciting! Stay tuned for the launch of AtlanticEDU.</p>
 
-        <div id="countdown">Launching in <span id="timer">10</span> days</div>
+    <header>
+        <h1>Welcome to Atlantic EDU</h1>
+        <p>Your Gateway to Excellence in Newfoundland International Student Education!</p>
+    </header>
 
-        <div id="subscribe-form">
-            <input type="email" id="email-input" placeholder="Enter your email">
-            <button id="subscribe-btn">Subscribe</button>
-        </div>
-    </div>
+    <section id="about">
+        <h2>About Atlantic EDU</h2>
+        <p>At Atlantic EDU, we are dedicated to shaping futures through education. As the leading agency for the Newfoundland International Student Education Program in Iran, we connect ambitious students with prestigious educational opportunities in one of Canada's most breathtaking provinces – Newfoundland.</p>
+    </section>
 
-    <script>
-        // Update the countdown timer
-        var countdownDate = new Date().getTime() + 10 * 24 * 60 * 60 * 1000; // 10 days from now
+    <section id="discover">
+        <h2>Discover Newfoundland</h2>
+        <p>Nestled on the eastern coast of Canada, Newfoundland boasts unparalleled natural beauty, vibrant cultural heritage, and a warm, welcoming community. Imagine studying against the backdrop of rugged coastlines, ancient fjords, and charming coastal towns. At Atlantic EDU, we make this dream a reality.</p>
+    </section>
 
-        var x = setInterval(function () {
-            var now = new Date().getTime();
-            var distance = countdownDate - now;
+    <section id="education">
+        <h2>World-Class Education</h2>
+        <p>Partnering with renowned educational institutions in Newfoundland, Atlantic EDU ensures that students receive a world-class education. From cutting-edge research facilities to passionate faculty members, our programs are designed to foster academic excellence and personal growth.</p>
+    </section>
 
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    <section id="perspective">
+        <h2>Global Perspective</h2>
+        <p>Immerse yourself in a truly international experience. Newfoundland's educational environment is enriched by a diverse community of students from around the world. Expand your horizons, build lifelong connections, and develop a global perspective that will set you apart in today's interconnected world.</p>
+    </section>
 
-            document.getElementById("timer").innerHTML = days;
+    <!-- Add more sections as needed -->
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "0";
-            }
-        }, 1000);
-    </script>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to take the first step? Contact us today for a consultation. Let Atlantic EDU be your guide to a brighter future filled with knowledge, experiences, and opportunities.</p>
+        <address>
+            <!-- Add contact details here -->
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Atlantic EDU. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
-
 </html>
-
