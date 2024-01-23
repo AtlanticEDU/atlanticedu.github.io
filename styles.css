@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 header, section, footer {
@@ -12,10 +13,20 @@ header {
     background-color: #3498db;
     color: #fff;
     text-align: center;
+    animation: fadeInUp 1s ease;
 }
 
 section {
     margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+}
+
+section.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
@@ -25,3 +36,14 @@ footer {
 }
 
 /* Add more styling as needed */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
