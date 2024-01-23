@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtlanticEDU - Coming Soon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        #countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #subscribe-form {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #email-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        #subscribe-btn {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #subscribe-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>AtlanticEDU</h1>
+        <p>Empowering Minds, Shaping Futures</p>
+        <p>We're working on something exciting! Stay tuned for the launch of AtlanticEDU.</p>
+
+        <div id="countdown">Launching in <span id="timer">10</span> days</div>
+
+        <div id="subscribe-form">
+            <input type="email" id="email-input" placeholder="Enter your email">
+            <button id="subscribe-btn">Subscribe</button>
+        </div>
+    </div>
+
+    <script>
+        // Update the countdown timer
+        var countdownDate = new Date().getTime() + 10 * 24 * 60 * 60 * 1000; // 10 days from now
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            document.getElementById("timer").innerHTML = days;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "0";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
 
