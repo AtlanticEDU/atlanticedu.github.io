@@ -89,6 +89,15 @@ svg{
     font-size: 1.3rem;
 }
 
+.container {
+    text-align: center;
+  }
+
+  .email-link {
+    font-size: 20px;
+    margin: 10px 0;
+    display: block;
+  }
 @keyframes clockHand{
     from{
         transform: rotateZ(0deg);
